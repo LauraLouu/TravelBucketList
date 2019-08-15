@@ -1,0 +1,298 @@
+/**** reset 
+
+html, body, div, span, object, iframe, ***/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+/***p, blockquote, pre, a, abbr, acronym, 
+address, big, cite, code, del, dfn, 
+em, font, img, ins, kbd, q, s, 
+samp, small, strike, strong, sub, 
+sup, tt, var, b, u, i, center, dl, 
+dt, dd, ol, ul, li, fieldset, form, 
+label, legend, table, caption,tbody, tfoot, 
+thead, tr, th, td***/
+
+    {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+
+/**  Display:inline-block; für bilder in grid structure **/
+
+/**** page layout ***/
+
+body {
+    font: 10pt Arial, Helvetica, sans-serif;
+    background-color: #efefef;
+}
+
+#contenttable {
+    padding: 0 0 5px 5px;
+    width: 960px;
+    margin: 0 auto;
+    /*margin-top: 35px;*/
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+
+#header {
+    padding: 10px;
+    height: 50px;
+    background: url(img/suhl-trans.png) no-repeat center;
+    /*  border-bottom: 1px solid #f05c36;
+    margin-left: 0 -5px;*/
+}
+
+
+#content {
+    width: 600px;
+    float: right;
+    padding: 10px;
+}
+
+#footer {
+    clear: both;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+i {}
+
+/**** links ****/
+
+a {
+    color: #b31c2a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #f05c36;
+}
+
+/*
+a.port-menu-head {
+    text-decoration:none;
+    color:black;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 11pt; 
+    font-weight: 300; 
+    line-height: 12px; 
+}
+
+a.port-menu-head:hover {
+    color:#568203
+}
+
+a.port-menu{
+    display: block;
+}
+
+a.port-menu:hover {
+    
+}
+
+*/
+
+/**** headliners ****/
+
+h1 {
+    color: #f05c36;
+    font-family: 'Trocchi', serif;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 36px;
+    margin: 0;
+}
+
+
+h2 {
+    color: #b31c2a;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+    font-weight: 300;
+    line-height: 25px;
+    margin: 20px 0 3px 0;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+    font-weight: 300;
+    line-height: 12px;
+    margin: 10px 0 3px;
+    padding-top: 5px;
+    color: #568203;
+    /* text-transform: uppercase;*/
+}
+
+h5 {
+    font-size: 1.0em;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 0;
+}
+
+
+
+/**** content boxes classes ****/
+
+.content-place {
+    margin-left: 5px;
+    padding: 5px 5px 5px 0;
+}
+
+
+/*** leaflet ***/
+
+#map {
+    height: 470px;
+    margin: 5px 5px 25px 0;
+}
+
+.legend {
+    padding: 5px;
+    background-color: #efefef;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 260px;
+    line-height: 23px;
+}
+
+.legend img {
+    vertical-align: middle;
+    width: 20px;
+    margin-right: 5px;
+
+}
+
+.legendResp {
+    padding: 5px;
+    background-color: #efefef;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 260px;
+    line-height: 23px;
+    display: none;
+}
+
+.legendResp img {
+    vertical-align: middle;
+    width: 20px;
+    margin-right: 5px;
+}
+
+/***************** responsive *******************/
+
+/* cannot test any widescreen, 
+so it is hard to decide what would look good */
+
+/* for 980px or less */
+
+@media screen and (max-width: 980px) {
+
+    #contenttable {
+        width: 94%;
+    }
+    #content {
+        width: 65%;
+        box-sizing: border-box;
+    }
+}
+
+/* for 700px or less */
+
+@media screen and (max-width: 700px) {
+
+    #content {
+        width: auto;
+        float: none;
+    }
+
+}
+
+
+/* for 480px or less */
+
+@media screen and (max-width: 480px) {
+
+    #header {
+        height: auto;
+    }
+
+    #contenttable {
+        width: auto;
+        margin-top: 0;
+    }
+
+
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 12pt;
+        line-height: 15px;
+        margin: 10px 0 3px 0;
+        padding-top: 10px;
+    }
+
+    h3 {
+        font-size: 10pt;
+        margin: 10px 0 3px;
+    }
+
+
+    .legend {
+        padding: 5px;
+        background-color: #efefef;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        width: 260px;
+        line-height: 23px;
+        display: none;
+    }
+
+    .legend img {
+        vertical-align: middle;
+        width: 20px;
+        margin-right: 5px;
+
+    }
+
+    .legendResp {
+        padding: 5px;
+        background-color: #efefef;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        width: auto;
+        line-height: 23px;
+        display: block;
+        margin-right: 5px;
+    }
+
+    .legendResp img {
+        vertical-align: middle;
+        width: 20px;
+        margin-right: 5px;
+    }
+
+
+}
